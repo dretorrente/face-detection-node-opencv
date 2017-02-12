@@ -1,14 +1,12 @@
 var cv = require('opencv');
 
-// camera properties
 var camWidth = 320;
 var camHeight = 240;
 var camFps = 10;
 var camInterval = 1000 / camFps;
 
-// face detection properties
-var rectColor = [0, 255, 0];
-var rectThickness = 2;
+var rectColor = [0, 0, 255];
+var rectThickness = 0.5;
 
 // initialize camera
 var camera = new cv.VideoCapture(0);
@@ -27,7 +25,6 @@ module.exports = function (socket) {
           face = faces[i];
           im.rectangle([face.x, face.y], [face.width, face.height], rectColor, rectThickness);
         }
-
         socket.emit('frame', { buffer: im.toBuffer() });
       });
     });

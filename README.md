@@ -2,8 +2,6 @@
 
 Real-time face detection using OpenCV, Node.js, and WebSockets.
 
-Click [here](http://youtu.be/v2SY0naPBFw) to see it in action.
-
 ## Requirements
 
 * [Node.js](http://nodejs.org/)
@@ -18,7 +16,7 @@ Click [here](http://youtu.be/v2SY0naPBFw) to see it in action.
 ## Running the demo
 
 * Make sure you are still in the `server` directory
-* To run the server: `node server.js`
-* To run the demo locally, open a browser and go to `localhost:8080`
+* To run the server: `node ./bin/www`
+* To run the demo locally, open a browser and go to `localhost:3000`
 
 The app should be up and running!
